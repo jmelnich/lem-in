@@ -16,7 +16,7 @@ int	ft_atoi(const char *str)
 {
 	int		i;
 	int		is_negative;
-	long	num;
+	int		num;
 	int		numlen;
 
 	i = 0;
@@ -36,7 +36,7 @@ int	ft_atoi(const char *str)
 		numlen++;
 	}
 	num = (is_negative) ? num * (-1) : num;
-	if (numlen > 19 || num > 9223372036854775807)
+	if (numlen > 10 || num > 2147483647)
 		return ((is_negative) ? 0 : -1);
-	return ((int)num);
+	return (num);
 }
