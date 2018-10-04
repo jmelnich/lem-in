@@ -1,9 +1,7 @@
 #include "lem_in.h"
 #include "../includes/lem_in.h"
 
-void	save_ants(int ants)
+void	save_ants(int ants, t_general* data)
 {
-	t_general data;
-
-	data.ants = ants;
+	data->ants = ants;
 }

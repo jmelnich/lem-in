@@ -10,6 +10,8 @@
 #define ANSI_COLOR_MAGENTA "\x1b[35m"
 #define ANSI_COLOR_CYAN    "\x1b[36m"
 #define ANSI_COLOR_RESET   "\x1b[0m"
+#define START "##start"
+#define END "##end"
 
 typedef struct		s_general
 {
@@ -33,9 +35,9 @@ typedef struct		s_room
 }					t_room;
 
 
-void	check_ants(char *str);
 void	error_msg (char *str);
 _Bool	is_file(const char* path);
-void 	save_ants(int ants);
+void	check_ants(char *str, t_general *data);
+void 	save_ants(int ants, t_general *data);
 
 #endif
