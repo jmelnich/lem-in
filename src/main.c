@@ -1,7 +1,7 @@
 #include "lem_in.h"
 #include "../includes/lem_in.h"
 #include <fcntl.h>
-#include <stdio.h> //DELME
+#include <stdio.h> //TODO: DELME
 
 int main(int ac, char **av)
 {
@@ -17,6 +17,8 @@ int main(int ac, char **av)
 	}
 	file_descriptor = open(av[1], O_RDONLY);
 	get_next_line(file_descriptor, &line);
+	while (is_skip_comment(line))
+		get_next_line(file_descriptor, &line);
 	check_ants(line, &data);
 	printf("%d\n", data.ants);
 //	t_room	*s = malloc(sizeof(t_room));

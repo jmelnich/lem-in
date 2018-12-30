@@ -1,6 +1,7 @@
 #include "lem_in.h"
 #include "../includes/lem_in.h"
 #include <sys/stat.h>
+#include <stdlib.h>
 
 _Bool is_file(const char *path)
 {
@@ -19,4 +20,14 @@ void	check_ants(char *str, t_general* data)
 	} else {
 		save_ants(ants, data);
 	}
+}
+
+_Bool	is_skip_comment(char *line)
+{
+	if (*line == '#' && (ft_strlen(line) == 1 ? 1 : *(line + 1) != '#')) {
+		comments_msg(line);
+		free(line);
+		return (1);
+	}
+	return (0);
 }

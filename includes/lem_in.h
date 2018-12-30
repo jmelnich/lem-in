@@ -36,6 +36,7 @@ typedef struct		s_room
 
 
 void	error_msg (char *str);
+void	comments_msg(char*str);
 _Bool	is_file(const char* path);
 void	check_ants(char *str, t_general *data);
 void 	save_ants(int ants, t_general *data);

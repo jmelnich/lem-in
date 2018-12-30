@@ -16,7 +16,7 @@ OBJ_DIR		= ./obj
 LIBFT		= ./libft
 SRC_DIR		= ./src
 INC_DIR		= ./includes
-SRC_files	= main.c validation.c errors.c save.c
+SRC_files	= main.c input_utils.c errors.c save.c
 
 OBJ			= $(addprefix $(OBJ_DIR)/,$(SRC_files:.c=.o))
 
