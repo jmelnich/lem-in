@@ -14,3 +14,10 @@ void comments_msg	(char *str)
 	ft_putendl(str);
 	ft_putstr(ANSI_COLOR_RESET);
 }
+
+void wrong_command (char *str)
+{
+	ft_putstr(ANSI_COLOR_YELLOW);
+	ft_putendl(str);
+	ft_putstr(ANSI_COLOR_RESET);
+}

@@ -1,6 +1,7 @@
 #im comment
-##imnotcomment
+#im second comment
    10
+##im wrong command
 ##start
 1 23 3
 2 16 7

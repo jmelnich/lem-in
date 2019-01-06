@@ -21,6 +21,21 @@ int main(int ac, char **av)
 		get_next_line(file_descriptor, &line);
 	check_ants(line, &data);
 	printf("%d\n", data.ants);
+	get_next_line(file_descriptor, &line);
+	while (!is_proper_command(line))
+		get_next_line(file_descriptor, &line);
+	if (ft_strcmp(line, START) == 0) {
+		// TODO:register start room, skip comments, clear lines
+	} else {
+		error_msg("THERE IS NO START COMMAND");
+	}
+	while (!is_proper_command(line))
+		get_next_line(file_descriptor, &line);
+	if (ft_strcmp(line, END) == 0) {
+		// TODO:register end room, skip comments, clear lines
+	} else {
+		error_msg("THERE IS NO END COMMAND");
+	}
 //	t_room	*s = malloc(sizeof(t_room));
 //	s->name = NULL;
 //	s->left = NULL;

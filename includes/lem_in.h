@@ -16,6 +16,8 @@
 typedef struct		s_general
 {
 	int				ants;
+	struct t_room 	*start_r;
+	struct t_room	*end_r;
 }					t_general;
 
 typedef struct 		s_link
@@ -29,15 +31,19 @@ typedef struct		s_room
 	char			*name;
 	int				x;
 	int				y;
-	struct s_room	*left;
-	struct s_room	*right;
+	_Bool 			is_free;
+//	struct s_room	*left; hz what i wanted
+//	struct s_room	*right;
 	t_link			*links;
 }					t_room;
 
 
 void	error_msg (char *str);
 void	comments_msg(char*str);
+void 	wrong_command (char *str);
 _Bool	is_file(const char* path);
+_Bool	is_skip_comment(char *line);
+_Bool	is_proper_command(char *line);
 void	check_ants(char *str, t_general *data);
 void 	save_ants(int ants, t_general *data);
 
