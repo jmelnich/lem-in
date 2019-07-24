@@ -1,5 +1,10 @@
 # Lem-in
 
+## Development prerequisites:
+libft folder as a submodule. Don't forget to update it:
+`git submodule init`
+`git submodule update`
+
 ## Project overview
 
 Project of school 42: let all ants pass from room start to the room end through the shortest way.
